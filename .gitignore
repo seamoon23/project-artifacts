@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 픽스처 실행 산출물 (테스트가 매번 생성)
+tests/fixture/docs/산출물/*.xlsx
+tests/fixture/docs/산출물/erd_*
+tests/fixture/docs/산출물/_*.json
+tests/fixture/docs/산출물/_history/
+tests/fixture/docs/산출물/CHANGELOG.md

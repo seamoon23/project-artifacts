@@ -1,0 +1,40 @@
+# 프로젝트 산출물 설정  →  <프로젝트루트>/docs/산출물/.artifacts.yml 로 복사해 사용
+# 비밀번호는 여기에 쓰지 않는다. 실행 시 환경변수 ARTIFACTS_DB_PASSWORD 로 전달.
+
+project: kapex
+version: 0.0.0            # 마지막 발행 버전 (스크립트가 자동 갱신)
+source_root: .            # 소스 스캔 시작 경로 (루트 기준 상대)
+
+db:
+  vendor: mariadb         # mariadb | mysql | oracle | cubrid | csv
+  host: 127.0.0.1
+  port: 3306
+  user: readonly
+  schema: kapex           # Oracle 은 OWNER, Cubrid 는 DB명
+  # service: ORCLPDB1     # Oracle 서비스명 (host/port 대신 dsn 직접 지정도 가능)
+  # dsn: jdbc:cubrid:host:33000:db:::
+  # jdbc_jar: ./lib/cubrid_jdbc.jar
+  # from_csv: _raw        # vendor: csv 일 때 CSV 디렉터리 (outdir 기준 상대)
+  exclude:                # 임시/백업 테이블 제외 (LIKE 패턴)
+    - "TMP_%"
+    - "BAK_%"
+    - "%_BAK"
+
+code_table:               # 공통코드 (없으면 통째로 생략)
+  master: COMTCCMMNCODE
+  detail: COMTCCMMNDETAILCODE
+  columns:                # 컬럼명이 표준과 다를 때만 지정
+    id: CODE_ID
+    id_nm: CODE_ID_NM
+    code: CODE
+    nm: CODE_NM
+    sort: CODE_ORDR
+    use: USE_AT
+    desc: CODE_DC
+
+outputs:                  # 생성할 산출물
+  - erd
+  - table
+  - column
+  - code
+  - program

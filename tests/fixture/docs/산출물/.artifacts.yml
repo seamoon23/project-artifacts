@@ -1,0 +1,14 @@
+project: sample
+version: 0.0.0
+source_root: src
+db:
+  vendor: csv
+  from_csv: ../../_raw
+  exclude:
+  - TMP_%
+outputs:
+- erd
+- table
+- column
+- code
+- program

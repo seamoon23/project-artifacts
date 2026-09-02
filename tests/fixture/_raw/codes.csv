@@ -1,0 +1,5 @@
+CODE_ID,CODE_ID_NM,CODE,CODE_NM,SORT,USE_AT,DESC
+USE_AT,사용여부,Y,사용,1,Y,
+USE_AT,사용여부,N,미사용,2,Y,
+DEPT_CD,부서코드,1000,경영지원,1,Y,본사
+DEPT_CD,부서코드,2000,개발,2,Y,
