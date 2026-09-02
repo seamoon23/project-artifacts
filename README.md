@@ -108,6 +108,13 @@ bash tests/run_test.sh
 - Oracle 12c 미만은 `DATA_DEFAULT`(LONG) 추출이 CLI 경로에서 깨질 수 있다.
 - 소스 스캔은 정규식 기반이다. 어노테이션 상수 참조, 동적 프록시, 리플렉션 호출은 추적되지 않는다.
 
+## 관련 스킬 (project-* 세트)
+
+- [project-workspace-setup](https://github.com/seamoon23/project-workspace-setup) — 저장소 3분할(dev/docs/works) 구조 셋팅. 이 스킬의 출력 폴더 `docs/산출물/`은 3분할의 `docs/`(git 추적) 아래에 놓이도록 설계됨.
+- [project-md-slim](https://github.com/seamoon23/project-md-slim) — 비대해진 CLAUDE.md를 핵심 규칙 + 참조 문서로 분할.
+
+세 스킬은 실행 의존성 없이 독립 동작한다. 순서로는 셋팅(workspace-setup) → 지침 유지(md-slim) → 산출물 유지(artifacts).
+
 ## 라이선스
 
 MIT
