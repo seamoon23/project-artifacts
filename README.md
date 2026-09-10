@@ -111,9 +111,10 @@ bash tests/run_test.sh
 ## 관련 스킬 (project-* 세트)
 
 - [project-workspace-setup](https://github.com/seamoon23/project-workspace-setup) — 저장소 3분할(dev/docs/works) 구조 셋팅. 이 스킬의 출력 폴더 `docs/산출물/`은 3분할의 `docs/`(git 추적) 아래에 놓이도록 설계됨.
-- [project-md-slim](https://github.com/seamoon23/project-md-slim) — 비대해진 CLAUDE.md를 핵심 규칙 + 참조 문서로 분할.
+- [project-md-slim](https://github.com/seamoon23/project-md-slim) — 비대해진 지침 문서(`PROJECT.md` 또는 `CLAUDE.md`)를 핵심 규칙 + 참조 문서로 분할.
+- [project-dev-tomcat](https://github.com/seamoon23/project-dev-tomcat) — 프로젝트별 로컬 Tomcat 인스턴스를 만들고(포트 자동 분리) 빌드·배포·기동·로그를 `tc` 한 명령으로 관리. Windows 전용.
 
-세 스킬은 실행 의존성 없이 독립 동작한다. 순서로는 셋팅(workspace-setup) → 지침 유지(md-slim) → 산출물 유지(artifacts).
+네 스킬은 실행 의존성 없이 독립 동작한다. 순서로는 셋팅(workspace-setup) → 지침 유지(md-slim) → 산출물 유지(artifacts)이고, 로컬 기동·배포(dev-tomcat)는 어느 단계에서든 병행한다.
 
 ## 라이선스
 
